@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<script type="text/javascript">
+	 var timeID; //接收setInterval()的返回值，以便停止时调用。
+	 var image;
+	 var current = 0;
+	 var images = new Array(5);
+	 
+	 
+	 //初始化images数组和image的值。
+	 function init(){
+		 for (var i=1;i<=5;i++){
+			 images[i] = new Image(600,350);
+			 //把所有的图片放进images数组
+			 images[i].src = "../img/"+i+".jpg";
+		 }
+		 //初始化image的值：获取文档中对应的图片节点。document.images[]返回文档中所有Image对象的引用（返回一个对象集合）。document.images[0]表示HTML文档中的第一个Image对象。此处也可以用document.images["pic"]代替。
+		 image = document.images[0];
+	 }
+	 
+	 //定义设置图片的函数
+	 function setSrc(i){
+		 current = i;
+		 //设置图片src的属性，实现图片的切换
+		 image.src = images[i].src;
+	 }
+	 
+	 function pre(){
+		 if (current <= 1){
+		 	alert('已经是第一张了');
+		 }else{
+			 current--;
+			 setSrc(current);
+		 }
+	 }
+	 
+	 function next(){
+		 if (current >= 5){
+		 	alert('已经是最后一张了');
+		 }else{
+			 current++;
+			 setSrc(current);
+		 }
+	 }
+	 
+	 //设置图片循环播放
+	 function play(){
+		 if (current >= 5){
+		 	current = 0;
+		 }
+		 setSrc(++current);
+	 }
+</script>
+
+<body onload="init()">
+	<input type="button" value="第一张" onclick="setSrc(1)">
+	<input type="button" value="上一张" onclick="pre()">
+	<input type="button" value="下一张" onclick="next()">
+	<input type="button" value="最后一张" onclick="setSrc(5)">
+	<input type="button" value="幻灯播放" onclick="timeID=setInterval('play()',500)">
+	<input type="button" value="停止播放" onclick="clearInterval(timeID)">
+	
+	<div style="border:1px solid blue;width:600px; height:350px;" id="myPic">
+	 	<img id="pic" src="../img/1.jpg" />
+	</div>
+</body>
+</html>
+
+<!--首先init()函数用于初始化images数组和image的值，本例中主要是利用setSrc()设置图片的src属性值，这样就达到了图片的切换，图片的轮播是使用定时器来时显的！setInterval('play()',500)的意思是每0.5s调用一次play()函数！-->

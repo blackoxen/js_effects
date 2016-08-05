@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html style= "background:#CC0000">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body style="background:#666666;margin: 30px;border:20px solid #fff;padding:10px; ">
+		<div  style="background:#349000;width:200px;height:100px"></div>
+		<h1>01010101011232131313131313131331313133131313313</h1>
+		<h1>02</h1>
+		<h1>03</h1>
+		<h1>04</h1>
+		<h1>05</h1>
+		<h1>06</h1>
+		<h1>07</h1>
+		<h1>08</h1>
+		<h1>09</h1>
+		<h1>10</h1>
+		<h1>11</h1>
+		<!----><h1>12</h1>
+		<h1>13</h1>
+		<h1>14</h1>
+		<h1>15</h1>
+		<h1>16</h1>
+		<h1>17</h1>
+		<h1>18</h1>
+		<h1>19</h1>
+		<h1>20</h1>
+		<h1>21</h1>
+		<h1>22</h1>
+		<h1>23</h1>
+		<h1>24</h1>
+		<h1>25</h1>
+		<h1>26</h1>
+		<h1>27</h1>
+		<h1>28</h1>
+		<h1>29</h1>
+		<h1>30</h1>
+		<script language="javascript">
+var h = "";
+h += "【documentElement.client：网页可视区域宽高，不含边线、滚动条】：ms,webkit一致 "+"\n";
+h += "documentElement.clientWidth："+ document.documentElement.clientWidth+"\n";	
+h += "documentElement.clientHeight："+ document.documentElement.clientHeight+"\n";	
+h += "\n";
+h += "【documentElement.scroll：网页html对象正文全文宽高,含滚动条隐藏区域】:ms,webkit一致 "+"\n";
+h += "documentElement.scrollWidth："+ document.documentElement.scrollWidth+"\n";	  
+h += "documentElement.scrollHeight："+ document.documentElement.scrollHeight+"\n";	
+h += "\n";
+h += "【documentElement.offset：-ms-，-webkit-不一致】"+"\n";
+h += "documentElement.offsetWidth："+ document.documentElement.offsetWidth +"\n";     //webkit:网页可见区域宽   ms:可见区宽+滚动条
+h += "documentElement.offsetWidth："+ document.documentElement.offsetHeight +"\n";   //webkit:网页html全文高    ms:可见区高+滚动条
+h += "\n";
+h += "\n";
+h += "下面的两个宽度都不会超过可见区域宽【实际上等于可见区域宽-body对象的margin或（border+margin）】，与滚动条拖动无关。"+"\n";
+h += "【body.client：body对象的绝对宽高（不含border和margin）】"+"\n";
+h += "body.clientWidth: " + document.body.clientWidth + "\n";   
+h += "body.clientHight: " + document.body.clientHeight + "\n";		
+h += "\n";
+h += "【body.scroll：body对象的绝对宽高+border】"+"\n";
+h += "body.offsetWidth："+ document.body.offsetWidth +"\n";     
+h += "body.offsetHeight："+ document.body.offsetHeight +"\n";   
+h += "\n";
+h += "下面可以理解为网页全部内容的宽度（含滚动条隐藏的部分）。 值得注意的是，body的内容可能超出body的宽度。"+"\n";
+h += "【body.scroll：body对象（-ms-）或html对象（-webkit-）全文本区域】"+"\n"
+h += "网页正文全文宽：body.scrollWidth: "+ document.body.scrollWidth+"\n";		//ms:网页body对象的全宽(含滚动条隐藏内容，不含border和margin) webkit:网页html对象全宽（含滚动条隐藏内容，不含滚动条宽度）
+h += "网页正文全文高：body.scrollHeight："+ document.body.scrollHeight+"\n";     //ms:网页body对象的全高(含滚动条隐藏内容，不含border和margin)	webkit:网页html对象全高（含滚动条隐藏内容，不含滚动条宽度）
+h += "\n";
+h += "\n";
+h += "【window.screenTop/left：ms,webkit不同】"+"\n";
+h += "window.screenTop："+ window.screenTop+"\n";	// webkit:网页窗口上边沿离屏幕顶端的距离   ms:网页可视区上边沿离屏幕顶端的距离
+h += "window.screenLeft："+ window.screenLeft+"\n";	// webkit:网页窗口左边沿离屏幕左端的距离	ms:网页可视区左边沿离屏幕左端的距离
+h += "\n";
+h += "【documentElement.scrollTop/Left：ms,webkit都不支持】"+"\n";
+h += "documentElement.scrollTop: "+document.documentElement.scrollTop+"\n";	// webkit:不支持
+h += "documentElement.scrollLeft："+ document.documentElement.scrollLeft+"\n";	// webkit:不支持
+h += "\n";
+h += "【body.scrollTop/Left：页面向上向左卷起来的距离，-ms-不支持】"+"\n";
+h += "body.scrollTop: "+document.body.scrollTop+"\n";		// webkit:页面向上卷起来的高度
+h += "body.scrollLeft: "+document.body.scrollLeft+"\n";		// webkit:页面向左卷起来的区域
+h += "\n";
+h += "\n";
+h += " 屏幕分辨率的宽："+ window.screen.width+"\n";			//屏幕可视区域宽度
+h += " 屏幕分辨率的高："+ window.screen.height+"\n";			//屏幕可视区域高度
+h += " 屏幕可用工作区宽度："+ window.screen.availWidth+"\n";
+h += " 屏幕可用工作区高度："+ window.screen.availHeight+"\n";		//不含状态栏的高度
+h += " 你的屏幕设置是 "+ window.screen.colorDepth +" 位彩色"+"\n";	
+h += " 你的屏幕设置 "+ window.screen.deviceXDPI +" 像素/英寸"+"\n";
+alert(h);
+</script>
+	</body>
+</html>

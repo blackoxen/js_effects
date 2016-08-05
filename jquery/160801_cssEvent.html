@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="base/jquery-2.2.4.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/160801_cssEvent.css"/>
+		<style type="text/css">
+			.test{
+				font-weight:bold;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="test" style="color:#000000; font-size:15px;">
+			Hello
+		</p>
+	</body>
+	
+	<script type="text/javascript">
+//		$('.test').css('padding-top','30px');	
+		$('.test').addClass('s1 s2');
+		console.log($('.test').css('padding-top'));
+		console.log($('.test').css('font-weight'));
+		console.log($('.test').css('font-size'));
+		
+		console.log($('.test').attr('style'));
+		$('.test').addClass('s1 s2');
+		$('.test').addClass('s3');
+//		$('p').removeClass();
+		console.log($('.test').attr('class'));
+		$('.test').removeClass('s2');
+		console.log($('p').attr('class'));
+	</script>
+	
+</html>

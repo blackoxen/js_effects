@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="d1" id="d1">
+			外层div内容
+			<br />
+			<span class="sp1" id="sp1">Span内容</span>
+			<br />
+			外层div内容
+		</div>
+		
+		<script type="text/javascript">
+		//事件冒泡
+//			$(function(){
+//				$('.sp1').bind('click',function(){alert('Span内容on click!');});
+//				$('.d1').click(function(){alert('div on click');});
+//				$('body').bind('click',function(){alert('body on click');});
+//				
+//			})
+		
+		//阻止事件冒泡：1,使用return false,fn不需要传递event事件对象; 2，使用event.stopPropagation(),需要向fn传递event事件对象。
+			$(function(){
+				$('.sp1').bind('click',function(){alert('Span内容on click!'); return false;});
+				$('.d1').click(function(){alert('div on click');return false;});
+				$('body').bind('click',function(){alert('body on click');return false;});
+				
+			})
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

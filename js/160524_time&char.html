@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>
+			<span>现在的时间：</span>
+			<span></span>
+			
+			<script>
+				var tt=new Date();
+				var time1=tt.getFullYear()+"-"+(tt.getMonth()+1) +"-"+tt.getDate()+" "+tt.getHours()+":"+tt.getMinutes()+":"+tt.getSeconds();
+				var bjtime = tt.toLocaleString();
+				document.write(time1+"<br />");
+				document.write(bjtime);
+			</script>
+			
+			<br />
+			
+			<h4 id="h1" border="1px solid #ccc"></h4>
+			<script>
+				function getTime(){
+					var hobj=document.getElementById('h1');
+					var tt = new Date();
+					var year=tt.getFullYear();
+					var month=tt.getMonth()+1;
+					var day=tt.getDate();
+					var hour=tt.getHours();
+					var minute=tt.getMinutes();
+					var second=tt.getSeconds();
+					
+					if(minute<10){
+						minute='0'+minute;
+					}
+					if(second<10){
+						second='0'+second;
+					}
+					
+					var timestr=year+'-'+month+'-'+day+' '+hour+':'+minute+':'+second;
+					
+					hobj.innerHTML = timestr;
+				}
+				
+				setInterval("getTime()",1000);
+				
+			</script>
+			
+			
+		</p>
+		
+		<!--
+				
+			chart:
+				property:length;
+				method:indexOf();lastIndexOf(); substr(a,b);slice(start,end);split(reg);search(reg);match(reg);replace(reg,"str");
+			
+			-->
+			
+			<span id="s1">hu nan sheng chang sha shi jing cheng te zhong tao ci you xian gong si</span>
+			<script>
+				var sobj=document.getElementById('s1').innerHTML;
+				//alert(sobj);
+				function pr (){
+					document.write(sobj + "----"+sobj.length+"<br />");
+				}
+				
+				var len=sobj.length;			
+				document.write("len: "+len+"<br />");
+				
+				var indexof=sobj.indexOf('an');
+				document.write("indexof: "+indexof+"<br />");
+				
+				var lastIndexof=sobj.lastIndexOf("an");
+				document.write("lastIndexOf(): "+ lastIndexof+"<br />");
+				
+				var substr=sobj.substr(5,6);
+				document.write('substr: '+ substr +"<br />");
+				pr();
+				
+				var slice=sobj.slice(1,8);
+				document.write('slice: '+slice+"<br />");
+				pr();
+				
+				var split1=sobj.split('an');
+				document.write("split: "+ split1+"<br />");
+				pr();
+				
+				var rep= sobj.replace("an","AN");
+				document.write("replace: "+ rep+"<br />");
+				pr();
+				
+				var split=sobj.split(' ');
+				document.write("split: " + split+"<br />");
+				
+				//property:length;
+				//method:join("|");pop();push("str");shift();unshift("str");reverse();concat();
+				//slice(start,end);sort(show);splice(a,b,'str');
+				
+				function print(arr){
+					document.write("arr: " +arr+ '---'+'length: '+ arr.length+"<br />");
+				}
+				
+				print(split);
+				
+				var join=split.join(" ");
+				document.write('join: '+join+'<br />');
+				
+				var pop=split.pop();
+				print(pop);
+				print(split);
+				
+				var push=split.push("SI");
+				print(push);
+				document.write(push+"<br />");
+				print(split);
+				
+				var shift=split.shift();
+				document.write(shift+"<br />");
+				print(split);
+				
+				var unshift = split.unshift("This");
+				document.write(unshift+'<br />');
+				print(split);
+				
+				var reverse= split.reverse();
+				document.write(reverse+'<br />');
+				print(reverse);
+				
+				var slice= split.slice(0,5);
+				document.write(slice+'<br />');
+				print(split);
+				
+				var splice = split.splice(1,2,"Add");
+				document.write(splice+'<br />');
+				print(split);
+				
+				function show(a,b){
+					//return a-b;
+					return b-a;
+				}
+				var sort=split.sort(show);
+				document.write(sort+"<br />");
+				print(split);
+				
+				var mathArr=[23,4,52,-1234,1234,44,0,89,0];
+				var sort2=mathArr.sort(show);
+				document.write(sort2+'<br />');
+				print(mathArr);
+				
+				
+				for(var i=0; i<split.length;i++){
+					document.write('第'+(i+1)+'个元素是: '+split[i]+'<br />');
+				};
+				
+				
+				
+				
+			</script>
+			
+			
+			
+			
+			
+			
+			
+			
+	</body>
+</html>

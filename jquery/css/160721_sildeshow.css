@@ -1,0 +1,60 @@
+.v_show{
+	padding-top:20px;
+	padding-left:20px;
+}
+
+.v_caption{
+	width: 360px;
+	position:relative;
+}
+
+.clear{
+	clear: both;
+}
+
+.cartoon{
+	float:left;
+	height:20px;
+}
+
+.highlight_tip{
+	float:left;
+}
+
+.current{
+	color:red;
+}
+
+.change_btn{
+	float:left;
+}
+
+em{
+	float:right;
+}
+
+.viewBox{
+	width: 360px;
+	height: 115px;
+	background:#ffffcc;
+	overflow: hidden;
+}
+
+.viewBox .list{
+	width: 800%;
+	float:left;
+	position:relative;
+}
+
+.viewBox .list ul>li{
+	display:inline;
+	float:left;
+	padding:10px 5px 10px 5px;
+}
+
+
+li a>img{
+	height:60px;
+	width:80px;
+	border-radius:5px;
+}
