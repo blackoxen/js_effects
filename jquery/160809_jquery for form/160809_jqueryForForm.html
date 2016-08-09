@@ -1,0 +1,117 @@
+<!--1、单行文本框获得焦点的样式设置；
+	2、多行文本框高度的调整+自定义动画；
+	3、多行文本框中滚动条的高度变化；
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			/*通过伪类选择器来设置获得焦点的样式*/
+			input:focus , textarea:focus{
+				border:1px solid #f00;
+				background:#fcc;
+			}
+			
+			.focus{
+				border:1px solid #f00;
+				background:#fcc;
+			}
+		</style>
+		<script>
+			//单行文本框获得或失去焦点的样式控制
+			$(function(){
+				$(":input").focus(function(){		//获得焦点
+					$(this).addClass("focus");
+				}).blur(function(){					//失去焦点
+					$(this).removeClass("focus");
+				});
+			});
+			
+			//多行文本框放大或缩小样式
+			$(function(){
+				var $comment = $("#comment");
+				
+				//点击放大按钮
+				$(".bigger").click(function(){
+					if(!$comment.is(":animated")){		//先判断是否处于动画状态
+						if($comment.height()<300){
+							//重新设置高度，在原有的基础上加50
+							//$comment.height($comment.height()+50);
+							//用自定义动画的方式：
+							$comment.animate({height:"+=50px"},600);
+						}
+					}	
+				});
+				
+				//点击缩小按钮
+				$(".smaller").click(function(){
+					if(!$comment.is(":animated")){		//先判断是否处于动画状态
+						if($comment.height()>50){
+							//重新设置高度，在原有的基础上减去50
+							//$comment.height($comment.height()-50);
+							//用自定义动画的方式：
+							$comment.animate({height:"-=50px"},600);
+						}
+					}
+				});	
+				
+				//向上滚动
+				$(".up").click(function(){
+					if(!$comment.is(":animated")){
+						$comment.animate({scrollTop:"-=50"},500);
+					}
+				});
+				
+				//向下滚动
+				$(".down").click(function(){
+					if(!$comment.is(":animated")){
+						$comment.animate({scrollTop:"+=50"},500)
+					}
+				});
+				
+			});
+			
+			
+
+		</script>
+	</head>
+	<body>
+		<form action="#" method="post" id="regForm">
+			<fieldset id="">
+				<legend>联系我们</legend>
+				<div>
+					<label for="username">名称：</label>
+					<input type="text" name="username" id="username" value="" />
+				</div>
+				<div>
+					<label for="pass">密码：</label>
+					<input type="password" id="pass"/>
+				</div>
+				<div>
+					<label for="msg">详细信息：</label>
+					<textarea id="msg" name="" rows="3" cols=""></textarea>
+				</div>
+				<br />
+				
+				<!--多行文本样式：缩小或放大留言框-->
+				<div class="msg_comment">
+					<div class="msg_caption">
+						<span class="bigger">放大</span>
+						<span class="smaller">缩小</span>
+						<span class="up">向上</span>
+						<span class="down">向下</span>
+					</div>
+					<div>
+						<textarea id="comment" name="" rows="8" cols="40">欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...欢迎发表评论和留言...</textarea>
+					</div>
+				</div>
+			</fieldset>
+			<input type="submit" value="提交"/>
+		</form>
+	</body>
+</html>

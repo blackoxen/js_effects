@@ -1,0 +1,109 @@
+<!--1.复选框应用-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<form action="">
+			贵公司选用的是那种类型的耐磨陶瓷？<br/>
+			<input type="checkbox" name="items1" value="直粘型" />直粘型
+			<input type="checkbox" name="items1" value="高温抗冲击型" />高温抗冲击型
+			<input type="checkbox" name="items1" value="螺柱焊接型" />螺柱焊接型
+			<input type="checkbox" name="items1" value="橡胶陶瓷二合一型" />橡胶陶瓷二合一型
+			<input type="checkbox" name="items1" value="陶瓷橡胶钢板三合一型"/>陶瓷橡胶钢板三合一型
+			<br />
+			<input type="button" id="CheckedAll" value="全  选"/>
+			<input type="button" id="CheckedNo" value="全不选"/>
+			<input type="button" id="CheckedRev" value="反  选" />
+			<input type="button" id="send1" value="提  交" />
+		</form>
+		<script type="text/javascript">
+			$(function(){
+				//全选
+				$("#CheckedAll").click(function(){
+					$("[name=items1]:checkbox").prop("checked",true);  //注意此处要用prop，不要用attr.
+				});
+				
+				//全不选
+				$("#CheckedNo").click(function(){
+					$("[name=items1]:checkbox").prop("checked",false);
+				});
+				
+				//反选
+				$("#CheckedRev").click(function(){
+					$("[name=items1]:checkbox").each(function(){
+						//$(this).attr("checked",!$(this).attr("checked"));
+						this.checked = !this.checked;
+					});
+				});
+				
+				//提交时弹出提示框，显示选中的项目
+				$("#send1").click(function(){
+					var str = "你选中的是：\r\n";
+					$('[name=items1]:checkbox:checked').each(function(){
+						str += $(this).val()+"\r\n";
+					});
+					alert(str);
+				});
+				
+			});
+		</script>
+		
+		
+		<br />
+		<br />
+		<form action="">
+			<input type="checkbox" name="" id="ckAll" value="" />全选/全不选<br />
+			<input type="checkbox" name="items2" id="" value="直粘型" />直粘型
+			<input type="checkbox" name="items2" value="高温抗冲击型"/>高温抗冲击型
+			<input type="checkbox" name="items2" value="螺柱焊接型 "/>螺柱焊接型
+			<input type="checkbox" name="items2" value="陶瓷橡胶二合一型"/>陶瓷橡胶二合一型
+			<input type="button" id="send2" value="提交"/>
+		</form>
+		<script>
+			$(function(){
+				//全选/全不选
+				$("#ckAll").click(function(){
+
+//					if(this.checked){
+//						$("[name=items2]:checkbox").prop("checked",true);
+//					}else{
+//						$("[name=items2]:checkbox").prop("checked",false);
+//					}
+					
+					//因为所有选项的checked属性和#ckAll的属性一致，所以可以省略if判断：
+					$("[name=items2]:checkbox").prop("checked",this.checked);
+					
+				});				
+				
+				//提交按钮
+				$("#send2").click(function(){
+					var str = "您选择的项目是：\r";
+					$("[name=items2]:checkbox:checked").each(function(){
+						str += $(this).val()+"\r";	
+					});
+					alert(str);
+				});
+				
+				
+				//复选框组：绑定单击事件
+				$("[name=items2]:checkbox").click(function(){
+					var flag=true;
+					if($("[name=items2]:checkbox:checked").length != 4){
+						//flag=false;
+						$("#ckAll").prop("checked",false);
+					}else{
+						$("ckAll").prop("checked",true);
+					}
+					
+					
+					
+				});
+			});
+		</script>
+	</body
+</html>
