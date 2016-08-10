@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			.contain{
+				width: 350px;
+				height: 250px;
+				border: 1px solid #666;
+				padding:20px;
+			}
+			.content{
+				float:left;
+				margin: 0 10px;
+			}
+			.select_l,.select_r{
+				width:150px;
+				height: 180px;
+			}
+			
+		</style>
+		
+		<div class="contain">
+			<div class="content">
+				<select multiple name="" id="select_l" class="select_l">
+					<option value="1">直粘型</option>
+					<option value="2">螺柱焊接型</option>
+					<option value="3">燕尾型</option>
+					<option value="4">陶瓷橡胶二合一</option>
+					<option value="5">陶瓷钢板二合一</option>
+					<option value="6">陶瓷橡胶钢板三合一</option>
+					<option value="7">高温抗冲击型</option>
+					<option value="8">超耐磨抗冲击型</option>
+				</select>
+				<div>
+					<p id="add">选中并添加到右边&gt;&gt;</p>
+					<p id="add_all">全部添加到右边&gt;&gt;</p>
+				</div>
+			</div>
+			<div class="content">
+				<select multiple name="" id="select_r" class="select_r">
+					<option value=""></option>
+				</select>
+				<div>
+					<p id="remove">&lt;&lt;选中删除到左边</p>
+					<p id="remove_all">&lt;&lt;全部删除到左边</p>
+				</div>
+			</div>
+		</div>
+		
+		<!--1.将选中的选项添加给对方
+			2.将全部选项添加给对方
+			3.双击某个选项将其添加给对方
+		-->
+		<script type="text/javascript">
+			//将选中的选项添加给对方
+			$("#add").click(function(){
+				var $options = $("#select_l option:selected");  //获取选中的选项
+				//var $remove = $options.remove();
+				//$remove.appendTo("#select_r");
+				
+				//进一步优化：删除和追加可以用appendTo()方法完成：
+				$options.appendTo("#select_r");
+			});
+			
+			
+			//将全部选项添加给对方：
+			$("#add_all").click(function(){
+				var $options = $("#select_l option");      //获取全部选项
+				$options.appendTo("#select_r");
+			});
+			
+			//双击某个选项将其添加给对方：
+			$("#select_l option").dblclick(function(){    //绑定双击事件
+				$(this).appendTo("#select_r");         //IE浏览器不支持
+				
+//				var $options = $("#select_l option:selected");
+//				$options.appendTo("#select_r");
+			});
+			
+		</script>
+	</body>
+</html>
