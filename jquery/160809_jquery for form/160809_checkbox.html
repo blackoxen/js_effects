@@ -66,7 +66,7 @@
 		</form>
 		<script>
 			$(function(){
-				//全选/全不选
+				//复选框：绑定全选/全不选
 				$("#ckAll").click(function(){
 
 //					if(this.checked){
@@ -76,14 +76,14 @@
 //					}
 					
 					//因为所有选项的checked属性和#ckAll的属性一致，所以可以省略if判断：
-					$("[name=items2]:checkbox").prop("checked",this.checked);
+					$("[name=items2]").prop("checked",this.checked);
 					
 				});				
 				
-				//提交按钮
+				//提交按钮:提交后弹出所选的项目
 				$("#send2").click(function(){
 					var str = "您选择的项目是：\r";
-					$("[name=items2]:checkbox:checked").each(function(){
+					$("[name=items2]:checked").each(function(){
 						str += $(this).val()+"\r";	
 					});
 					alert(str);
@@ -91,17 +91,29 @@
 				
 				
 				//复选框组：绑定单击事件
-				$("[name=items2]:checkbox").click(function(){
-					var flag=true;
-					if($("[name=items2]:checkbox:checked").length != 4){
-						//flag=false;
-						$("#ckAll").prop("checked",false);
-					}else{
-						$("ckAll").prop("checked",true);
-					}
-					
-					
-					
+				//方法一：通过长度来判断
+				$("[name=items2]:checkbox").click(function(){      //此处选择器省去:checkbox也无妨
+					var boxlen = $("[name=items2]:checkbox").length;
+					var cklen = $("[name=items2]:checked").length;
+//					if(boxlen == cklen){
+//						$("#ckAll").prop("checked",true);
+//					}else{
+//						$("#ckAll").prop("checked",false);
+//					}
+					//继续优化上面的if语句：
+					$("#ckAll").prop("checked", boxlen == cklen);
+					alert("boxlen="+boxlen+";cklen="+cklen);
+				
+				
+				//方法二：
+//					var flag=true;
+//					$('[name=items2]:checkbox').each(function(){
+//						if(!this.checked){
+//							flag = false;
+//						}
+//					});
+//					
+//					$('#ckAll').prop('checked',flag);			
 				});
 			});
 		</script>

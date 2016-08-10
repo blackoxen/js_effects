@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jquery for table</title>
+		<link rel="stylesheet" type="text/css" href="../base/base.css"/>
+		<script src="../base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			th{
+				height: 40px;
+				width: 150px;
+				color: #000;
+				font-size: 20px;
+				font-weight: bolder;
+				background: #AAAAAA;
+			}
+			td{
+				height: 30px;
+				text-align: center;
+			}
+			
+			.even{background:#FFCCCC;}  		/*设置偶数行的背景，第一行索引是0，所以是从偶数行开始的*/
+			.odd{background:#FFFFCC;}		   /*设置奇数行的背景*/
+			.selected{background: red; color: #fff;}   /*设置高亮选择行*/
+			
+		</style>
+		
+		<table border="" cellspacing="" cellpadding="">
+			<thead><tr><th>产品系列</th><th>产品一</th><th>产品二</th></tr></thead>
+			<tbody>
+				<tr>
+					<td>耐磨衬板</td>
+					<td>直粘型</td>
+					<td>螺柱焊接型</td>
+				</tr>
+				<tr>
+					<td>滚筒包胶</td>
+					<td>超耐磨滚筒包胶</td>
+					<td>抗冲击滚筒包胶</td>
+				</tr>
+				<tr>
+					<td>耐磨陶瓷管道</td>
+					<td>一体成型耐磨陶瓷管道</td>
+					<td>贴片陶瓷管道</td>
+				</tr>
+				<tr>
+					<td>内衬耐磨陶瓷设备</td>
+					<td>陶瓷内衬旋流器</td>
+					<td>耐磨陶瓷圆风门</td>
+				</tr>
+				<tr>
+					<td>耐磨陶瓷泵管</td>
+					<td>陶瓷S管</td>
+					<td>R275超耐磨弯头</td>
+				</tr>
+				<tr>
+					<td>陶瓷搅拌刀</td>
+					<td>三一二方机中刀</td>
+					<td>中联三方机中刀</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<script type="text/javascript">
+			$(function(){
+				//
+				$("tbody tr:odd").addClass("odd");
+				$("tbody tr:even").addClass("even");
+				//$("tr:contains('陶瓷S管')").addClass("selected");  //设置指定行高亮显示
+				
+				$("tbody tr").click(function(){
+					$(this).addClass("selected")
+							.siblings().removeClass("selected")
+							.end()
+							.children(":first").attr("font-weight",'bolder');
+				})
+			});
+		</script>
+	</body>
+</html>
