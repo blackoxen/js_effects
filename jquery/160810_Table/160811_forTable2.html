@@ -1,3 +1,10 @@
+<!--
+	1、表格隔行变色
+	2、复选框多行选择；
+	3、表格收展；
+	4、表格内容筛选；
+-->
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -29,6 +36,7 @@
 			
 		</style>
 		<form action="" method="post">
+			<lable>筛选：</lable><input type="text" name="" id="filterName" value="" />
 			<table border="" cellspacing="" cellpadding="">
 				<thead>
 					<tr>
@@ -41,43 +49,43 @@
 				</thead>
 				<tbody>
 					<tr class="parent" id="row_01"><td colspan="5">行业分类一</td></tr>
-					<tr>
+					<tr class="child_row_01">
 						<td><input type="radio" name="only" id="" value="" /></td>
 						<td><input type="checkbox" /></td>
 						<td>耐磨衬板</td>
 						<td>直粘型</td>
 						<td>螺柱焊接型</td>
 					</tr>
-					<tr>
+					<tr class="child_row_01">
 						<td><input type="radio" name="only" id="" value="" /></td>
 						<td><input type="checkbox" /></td>
 						<td>滚筒包胶</td>
 						<td>超耐磨滚筒包胶</td>
 						<td>抗冲击滚筒包胶</td>
 					</tr>
-					<tr>
+					<tr class="child_row_01">
 						<td><input type="radio" name="only" id="" value="" /></td>
 						<td><input type="checkbox" /></td>
 						<td>耐磨陶瓷管道</td>
 						<td>一体成型耐磨陶瓷管道</td>
 						<td>贴片陶瓷管道</td>
 					</tr>
-					<tr class="parent" id="row_02"><td colspan="5">行业分类一</td></tr>
-					<tr>
+					<tr class="parent" id="row_02"><td colspan="5">行业分类二</td></tr>
+					<tr class="child_row_02">
 						<td><input type="radio" name="only" id="" value="" /></td>
 						<td><input type="checkbox" /></td>
 						<td>内衬耐磨陶瓷设备</td>
 						<td>陶瓷内衬旋流器</td>
 						<td>耐磨陶瓷圆风门</td>
 					</tr>
-					<tr>
+					<tr class="child_row_02">
 						<td><input type="radio" name="only" id="" value="" /></td>
 						<td><input type="checkbox" /></td>
 						<td>耐磨陶瓷泵管</td>
 						<td>陶瓷S管</td>
 						<td>R275超耐磨弯头</td>
 					</tr>
-					<tr>
+					<tr class="child_row_02">
 						<td><input type="radio" name="only" id="" value="" /></td>
 						<td><input type="checkbox" /></td>
 						<td>陶瓷搅拌刀</td>
@@ -87,21 +95,38 @@
 				</tbody>
 			</table>
 		
-			<input type="submit" value=""/>
+			<input type="submit" value="提交"/>
 		</form>
 
 		<script type="text/javascript">
 			$(function(){
-				//
+				//隔行变色
 				$("tbody tr:odd").addClass("odd");
 				$("tbody tr:even").addClass("even");
 				//$("tr:contains('陶瓷S管')").addClass("selected");  //设置指定行高亮显示
 				
 				//多行复选框高亮
-				$("tbody>tr").click(function(){
+				$("tr:not(.parent)").click(function(){
 					$(this).hasClass("selected")
 					?	$(this).removeClass("selected").find(":checkbox").prop("checked",false)
 					:	$(this).addClass("selected").find(":checkbox").prop("checked",true);						
+				});
+				
+				//多行表格的展开与关闭
+				$("tr.parent").click(function(){
+					$(this).toggleClass("selected")
+							//this.id：此处用javascript语法。toggle()控制交替隐现。
+							.siblings(".child_"+this.id).toggle(300);  		
+				});
+				
+				//筛选表格内容：
+				$("#filterName").keyup(function(){
+					//var text=$(this).val();
+					//alert(text);
+					//要点：1、单双引号嵌套：双-单-双  或者 单-双-单；等等..
+					//contains()传入变量，变量前后用两个加号，并用单双引号嵌套：$("div:contains('"+str+"')");
+					$("table tbody tr").hide()
+										.filter(":contains('"+$(this).val()+"')").show();  			
 				});
 			});
 		</script>
