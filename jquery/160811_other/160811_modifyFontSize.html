@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<script src="../base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<style type="text/css">
@@ -26,8 +27,29 @@
 		<script>
 			$(function(){
 				$('span').click(function(){
-					var cssSize = $('sd')
-					var 
+					var textObj = $('.text') ; //缓存对象 cache object
+					var cssSize = textObj.css("font-size");
+					//console.log(cssSize);
+					var fontSize = parseInt(cssSize,10);  //String转number
+					//font-size:缩放range: 8-48px;zoom step: 2px
+					var zoomStep = 2;
+					var zoomMax = 48;
+					var zoomMin = 8;
+					if($(this).attr("id") == "bigger"){		//通过id判断点击是哪个span
+						if(fontSize < zoomMax){	
+							//var setSize = (fontSize+zoomStep)+'px';
+							//textObj.css("font-size",setSize);
+							//console.log(setSize);
+							fontSize += zoomStep;  //优化之后
+						}
+					}else if($(this).attr("id") == "smaller"){
+						if(fontSize > zoomMin){
+							//var setSize =(fontSize- zoomStep) + 'px';
+							//textObj.css('font-size',setSize);	
+							fontSize -= zoomStep;  //优化
+						}
+					}
+					textObj.css("font-size",fontSize+"px");   //优化
 				});
 			});
 		</script>
