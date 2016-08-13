@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../base/base.css"/>
+		<script src="../base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<style type="text/css">
+			.tab_menu ul{
+				overflow: auto;
+				width: 250px;
+				background: #FFFFCC;
+			}
+			.tab_menu li{
+				float:left;
+				padding:2px 5px;
+				font-size: 16px;
+				/*background: #FF0000;*/
+			}
+			.tab_menu .on{
+				background: #FF0000;
+				color: #fff;
+			}
+			.tab_menu .hover{
+				background: #FFCCCC;
+				box-shadow: 2px 2px 2px #ccc;
+			}
+			.tab_box{
+				height: 200px;
+				width: 250px;
+				border: 1px solid #666;
+			}
+			.hide{
+				display:none;
+			}
+			.tab_box div{
+				font-size: 16px;
+			}
+		</style>
+		<div class="tab">
+			<div class="tab_menu">
+				<ul>
+					<li id='lab_01' class="on">陶瓷衬板</li>
+					<li id="lab_02">陶瓷管道</li>
+					<li id="lab_03">内衬设备</li>
+				</ul>
+			</div>
+			<div class="tab_box">
+				<div id="div_lab_01">直粘型耐磨陶瓷、螺柱焊接型耐磨陶瓷、耐磨陶瓷复合钢板、陶瓷橡胶复合钢板</div>
+				<div id="div_lab_02" class="hide">一体成型耐磨陶瓷管道、螺柱焊接型耐磨陶瓷管道、贴片陶瓷管道</div>
+				<div id="div_lab_03" class="hide">耐磨陶瓷内衬旋流器、耐磨陶瓷圆风门、耐磨陶瓷密封环|密封圈</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				var $ul_li = $(".tab_menu li");
+				$ul_li.click(function(){
+					$(this).addClass("on")
+							.siblings().removeClass("on");
+					
+					//方法一：通过对应的id名称来选取div,然后通过增删class来控制隐现
+//					$('#div_' + this.id).removeClass("hide")    
+//							.siblings().addClass("hide");
+							
+					//方法二：通过获取对应的索引值，然后通过show()、hide()方法控制隐现
+					var index = $ul_li.index(this);		//获取被单击的li的位置索引			
+					//alert(index);			
+					$(".tab_box > div").eq(index)     //获取对应索引位置的div
+					     .show()
+						 .siblings().hide();			
+				})
+				
+				.hover(function(){     //添加hover事件
+						$(this).addClass("hover");	
+				},function(){
+					$(this).removeClass("hover");
+				});
+	
+			});
+		</script>
+		
+	</body>
+</html>

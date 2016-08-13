@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"  "http://www.w3.org/TR/html4/strict.dtd">  
+  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">  
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <title>TabControl04</title>  
+        <meta name="author" content="Administrator" />  
+        <!-- Date: 2014-06-18 -->  
+        <style type="text/css">  
+            body{margin:0;padding:0;}  
+            .content{margin:0 auto; width:1002px;height:500px;background: #CCCCCC;}  
+            .menu{width:98px;height:500px;float:left;background:#0099CC;border-right:2px solid #666666;font-size:80px;}  
+            .showdiv{width:502px;height:500px;float:left;display:none;background:#CCCCFF;font-size:100px;}  
+            .showdiv1{width:502px;height:500px;float:left;background:#CCCCFF;font-size:100px;}  
+        </style>  
+        <script type="text/javascript">  
+            function TabControl(n){  
+                for(var i=0;i<5;i++){  
+                    if(i==n){  
+                        var s=document.getElementById("show"+n);  
+                        s.style.display="block";  
+                    }else{  
+                        var s=document.getElementById("show"+i);  
+                        s.style.display="none";  
+                    }  
+                }  
+            }  
+            function disappear(m){  
+                var d=document.getElementById("show"+m);  
+                d.style.display="none";  
+            }  
+        </script>  
+    </head>  
+    <body>  
+        <div class="content">  
+            <div class="menu" onmousemove="TabControl(0)">A</div>  
+            <div class="showdiv" id="show0" onmouseout="disappear(0)">1</div>  
+            <div class="menu" onmousemove="TabControl(1)">B</div>  
+            <div class="showdiv" id="show1" onmouseout="disappear(1)">2</div>  
+            <div class="menu" onmousemove="TabControl(2)">C</div>  
+            <div class="showdiv" id="show2" onmouseout="disappear(2)">3</div>  
+            <div class="menu" onmousemove="TabControl(3)">D</div>  
+            <div class="showdiv" id="show3" onmouseout="disappear(3)">4</div>  
+            <div class="menu" onmousemove="TabControl(4)">E</div>  
+            <div class="showdiv1" id="show4" onmouseout="disappear(4)">5</div>  
+              
+        </div>  
+          
+  
+    </body>  
+</html> 
