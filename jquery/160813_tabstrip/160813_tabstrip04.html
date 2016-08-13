@@ -1,0 +1,120 @@
+
+<!--通过改变z-index和opacity的值来切换选项卡-->
+
+<!DOCTYPE>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jquery hover鼠标滑过选项卡切换 </title>
+		<link rel="stylesheet" type="text/css" href="160813_tabstrip04.css"/>
+		<script type="text/javascript" src="../base/jquery-2.2.4.min.js"></script>
+	</head>
+
+	<body>
+		<div class="xxk">
+			<div class="xxktit">
+				<ul>
+					<li id="hxgd">
+						<a href="#">泓信观点</a>
+					</li>
+					<li id="mtbd">
+						<a href="#">媒体报道</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="khxgd" class="kinfo">
+				<ul>
+					<li>
+						<div class="main1_r_l">
+							<div class="main1_r_bt">
+								<a href="news_more.asp">裘国根：“沪港通”与资本市场改革 </a>
+							</div>
+							<div class="main1_r_nr">本文为重阳投资董事长裘国根在近期中国金融四十人“山东论坛”暨“深化经济体制改革的几个重点领域”内部研讨会上的发言，由中国金融四十人论...</div>
+						</div>
+						<div class="main1_r_r">25<span>09</span></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<div class="main1_r_l">
+							<div class="main1_r_bt">
+								<a href="news_more.asp">裘国根：“沪港通”与资本市场改革 </a>
+							</div>
+							<div class="main1_r_nr">本文为重阳投资董事长裘国根在近期中国金融四十人“山东论坛”暨“深化经济体制改革的几个重点领域”内部研讨会上的发言，由中国金融四十人论...</div>
+						</div>
+						<div class="main1_r_r">25<span>09</span></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<div class="main1_r_l">
+							<div class="main1_r_bt">
+								<a href="news_more.asp">裘国根：“沪港通”与资本市场改革 </a>
+							</div>
+							<div class="main1_r_nr">本文为重阳投资董事长裘国根在近期中国金融四十人“山东论坛”暨“深化经济体制改革的几个重点领域”内部研讨会上的发言，由中国金融四十人论...</div>
+						</div>
+						<div class="main1_r_r">25<span>09</span></div>
+						<div class="clear"></div>
+					</li>
+				</ul>
+			</div>
+
+			<div id="kmtbd" class="kinfo">
+				<ul>
+					<li>
+						<div class="main1_r_l">
+							<div class="main1_r_bt">
+								<a href="news_more.asp">标识创意源于水纹东南部，方形代表专业... </a>
+							</div>
+							<div class="main1_r_nr">本文为重阳投资董事长裘国根在近期中国金融四十人“山东论坛”暨“深化经济体制改革的几个重点领域”内部研讨会上的发言，由中国金融四十人论...</div>
+						</div>
+						<div class="main1_r_r">05<span>09</span></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<div class="main1_r_l">
+							<div class="main1_r_bt">
+								<a href="news_more.asp">标识创意源于水纹东南部，方形代表专业... </a>
+							</div>
+							<div class="main1_r_nr">本文为重阳投资董事长裘国根在近期中国金融四十人“山东论坛”暨“深化经济体制改革的几个重点领域”内部研讨会上的发言，由中国金融四十人论...</div>
+						</div>
+						<div class="main1_r_r">05<span>09</span></div>
+						<div class="clear"></div>
+					</li>
+					<li>
+						<div class="main1_r_l">
+							<div class="main1_r_bt">
+								<a href="news_more.asp">标识创意源于水纹东南部，方形代表专业... </a>
+							</div>
+							<div class="main1_r_nr">本文为重阳投资董事长裘国根在近期中国金融四十人“山东论坛”暨“深化经济体制改革的几个重点领域”内部研讨会上的发言，由中国金融四十人论...</div>
+						</div>
+						<div class="main1_r_r">05<span>09</span></div>
+						<div class="clear"></div>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script type="text/javascript" language="javascript">
+			$(function() {
+				$("#khxgd").css({"z-index": "10"});
+				$("#kmtbd").css({"z-index": "9"	});
+
+				$('.xxktit li').hover(function() {
+					var thisId = $(this).attr("id");
+					//其他的div隐藏
+					$(".kinfo").not($("#k" + thisId)).animate({opacity: 0}, 300);
+					$(".kinfo").not($("#k" + thisId)).css({	"z-index": "0"});
+					//on hover的li标签，加上与hover相同得样式
+					$(this).addClass("cur");
+					$("#k" + thisId).stop(true, true).animate({	opacity: 1.0}, 300);
+					$("#k" + thisId).css({"z-index": "10"});
+				}, function() {
+					var thisId = $(this).attr("id");
+					$(this).removeClass("cur");
+				});
+			});
+		</script>
+	</body>
+
+</html>
