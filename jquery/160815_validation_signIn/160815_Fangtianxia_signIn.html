@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://passport.fang.com/NewRegister.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta name="viewport" content="width=device-width" charset="gb2312">
+	    <!--rel="dns-prefetch"：预解析技术，当你浏览网页时，浏览器会在加载网页时对网页中的域名进行解析缓存，这样在你单击当前网页中的连接时就无需进行DNS的解析，减少用户等待时间，提高用户体验。-->
+	    <link rel="dns-prefetch" href="https://static.soufunimg.com/">
+	    <link rel="dns-prefetch" href="https://captcha.fang.com/">
+	    <link rel="dns-prefetch" href="https://countpvn.3g.fang.com/">
+	    <title>房天下-注册</title>
+	    
+	    <link rel="stylesheet" type="text/css" href="./160815_Fangtianxia_signIn_files/common.css">
+	    <link rel="stylesheet" type="text/css" href="./160815_Fangtianxia_signIn_files/css1.css">
+	    <link rel="stylesheet" type="text/css" href="./160815_Fangtianxia_signIn_files/css.css">
+	    <link rel="stylesheet" type="text/css" href="./160815_Fangtianxia_signIn_files/CSS_F3.css">
+	    <link rel="stylesheet" type="text/css" href="./160815_Fangtianxia_signIn_files/css400.css">
+	
+	    <img src="./160815_Fangtianxia_signIn_files/countpv" width="0" height="0">
+	    <!--<script type="text/javascript" async="" src="./160815_Fangtianxia_signIn_files/ga.js"></script>-->
+	    <!--<script type="text/javascript" async="" src="./160815_Fangtianxia_signIn_files/load.min.js"></script>-->
+	    <script src="./160815_Fangtianxia_signIn_files/jquery-1.4.2.min.js"></script>
+	    <!--<script src="./160815_Fangtianxia_signIn_files/nav.js"></script>-->
+	    <script src="./160815_Fangtianxia_signIn_files/register_validate.js" charset="gb2312"></script>
+	    <script src="./160815_Fangtianxia_signIn_files/register.js" charset="gb2312"></script>
+	        
+	    <script src="./160815_Fangtianxia_signIn_files/RSA.min.js"></script>
+	    <!----><script type="text/javascript">
+	        setMaxDigits(129);
+	        var key_to_encode = new RSAKeyPair("010001", "", "978C0A92D2173439707498F0944AA476B1B62595877DD6FA87F6E2AC6DCB3D0BF0B82857439C99B5091192BC134889DFF60C562EC54EFBA4FF2F9D55ADBCCEA4A2FBA80CB398ED501280A007C83AF30C3D1A142D6133C63012B90AB26AC60C898FB66EDC3192C3EC4FF66925A64003B72496099F4F09A9FB72A2CF9E4D770C41");
+	        var query = 'https://passport.fang.com';
+	        jQuery(function () {
+	            jQuery("#strUsername").focus();
+	            jQuery("#strVcode").attr("disabled", true);
+	            //城市展示代码
+	            jQuery(document.body).click(function (e) {
+	                if (jQuery(e.target).closest("#event_citybox,#event_city_input").size() == 0) {
+	                    jQuery("#event_citytab a").first().mouseover();
+	                    jQuery("#event_citybox").hide();
+	                }
+	            });
+	            jQuery("#event_city_input").click(function () {
+	                jQuery("#event_citytab a").first().mouseover();
+	                jQuery("#event_citytab a").first().addClass("on");
+	                jQuery("#event_citybox").show();
+	            });
+	            jQuery("#event_citytab a").mouseover(function (e) {
+	                jQuery(".event_citylist").hide();
+	                jQuery("#event_citytab a").removeClass("on");
+	                var target = jQuery(".event_citylist[letter='" + e.target.innerHTML + "']");
+	                jQuery(this).addClass("on");
+	                target.show();
+	            });
+	            jQuery(".event_citylist a").click(function () {
+	                jQuery("#event_city_input").val(jQuery(this).text());
+	                jQuery("#event_citybox").hide();
+	                jQuery("#div_event_city_input").hide();//隐藏‘请选择传城市’
+	                iscodevalid = true;
+	            });
+	            jQuery("#strUsername").val("");
+	            jQuery("#strPassword").val("");
+	            if ("" != "") {
+	                jQuery("#event_city_input").val("");
+	            }
+	            jQuery("#show400info").click(function () {
+	                jQuery("#detailinfo").css("display", "block");
+	                jQuery(".main").css("height", "650px");
+	                jQuery("#soufunCardRegion").css("margin-top", "170px");
+	            });
+	        });
+	
+	    </script>
+	</head>
+
+	<body>
+	    <form id="mobileregister" method="post" style="background: #efefef;">
+	        <div class="logoBox" style="min-width: 1200px;">
+	            <input type="hidden" name="backurl" id="backurl" value="https://passport.fang.com">
+	            <input type="hidden" name="service" id="service" value="soufun-passport-web">
+	            <input type="hidden" name="host" id="host" value="">
+	            <div class="logo">
+	                <a href="https://passport.fang.com/NewRegister.aspx#">
+	                    <img src="./160815_Fangtianxia_signIn_files/logo_04.png"></a>
+	            </div>
+	            <span class="word">注册通行证</span>
+	        </div>
+	
+	        <div class="main" style="height: 612px;">
+	            <div class="leftList">
+	                <ul class="formList">
+	                    <li id="usernameregion" style="position: relative; z-index: 2;">
+	                        <label><em class="red">*</em> 用户名：</label><input type="text" id="strUsername" name="strUsername" class="inputStyle">
+	                        <!--用于自动检索用户名下拉-->
+	                        <div class="dropdown" id="userDiv" style="display: none;"></div>
+	                        <div class="" id="div_strUsername" style="position: absolute; top: 0; left: 62%;"><div class="plus_c">请输入用户名，推荐使用中文名称</div></div>
+	                    </li>
+	                    <li style="position: relative;">
+	                        <label><em class="red">*</em> 请设置密码：</label><input type="password" class="inputStyle" id="strPassword" name="strPassword">
+	                        <div class="" id="div_strPassword" style="position: absolute; top: 0; left: 62%;"></div>
+	                    </li>
+	                    <li style="position: relative;">
+	                        <label><em class="red">*</em> 请确认密码：</label><input type="password" class="inputStyle" id="strPasswordConfirm" name="strPasswordConfirm">
+	                        <div class="" id="div_strPasswordConfirm" style="position: absolute; top: 0; left: 62%;"></div>
+	                    </li>
+	
+	                    <li style="position: relative;">
+	                        <label><em class="red">*</em> 手机号码：</label>
+	                        <input type="text" class="inputStyle" id="strMobile" name="MobilePhone" maxlength="11">
+	                        <div class="" id="div_strMobile" style="position: absolute; top: 0; left: 62%;"></div>
+	                    </li>
+	
+	                    <li style="position: relative;">
+	                        <label><em class="red">*</em> 手机验证码：</label>
+	                        <input type="text" class="inputStyle width2" id="strVcode" name="vcode_phone" disabled="">
+	                        <input type="button" value="获取短信验证码" class="yzmBtn" id="vcode" onclick="return getPhoneCode();">
+	                        <div class="" id="div_strVcode" style="position: absolute; top: 0; left: 62%;"></div>
+	                        <!--400免摘机服务页面20150407 begin-->
+	                        <div class="plus_b" id="phoneshow" style="position: absolute; top: 0; left: 62%; display: none;">
+	                            如果您收不到验证码,可以一分钟后再次点击获取,或者点击<a id="show400info" href="https://passport.fang.com/NewRegister.aspx#" style="color: #4fc0e8">这里</a>
+	                            <!--鼠标点击这里出现的提示-->
+	                            <!--语音验证码出现的提示-->
+	                            <div id="detailinfo" class="herenote" style="display: none; z-index: 222;">
+	                                <i class="jt_icon"></i>
+	                                <p style="height: 39px; line-height: 39px;">
+	                                    <span style="float: left">收不到验证码？您可以通过“语音”方式获取验证码，此服务免费。</span><input id="getVoiceCode" type="button" value="点击使用语音获取验证码" onclick="return SendVoiceCode()" class="test_btn" style="margin: 5px 0; padding: 5px; float: left; *margin-left: 4px; *width: 160px; *padding: 0px; *margin-top: 4px;">
+	                                </p>
+	                            </div>
+	                            <!--发送语音验证码出现的提示-->
+	                            <div id="detailinfoTip" class="herenote" style="display: none; z-index: 222;">
+	                                <i class="jt_icon"></i>
+	                                <p id="tips">
+	                                    房天下向您的手机：<span id="mobileid">159****3312</span>拨打电话并播报验证码。来电号码<span style="color: #cc0000;">010-5854-4536。</span><br>
+	                                    <span style="float: left">如果1分钟内没接到语音验证码电话，请点击按钮重新获取。</span><input id="voiceCode" type="button" value="41秒后使用语音获取验证码" class="test_btn" onclick="return SendVoiceCode()">
+	                                </p>
+	                            </div>
+	                        </div>
+	
+	                        <!--验证弹出 begin -->
+	                        <div class="yzbox2" id="div_mathcode" style="display: none;">
+	                            <div class="yzboxa">
+	                                <div class="yzboxa01">
+	                                    <div class="s1">
+	                                        <script type="text/javascript">
+	                                            //获取验证码
+	                                            var v_rand = Math.round(Math.random() * 10000);
+	                                            document.write("<img id='imgcode' name='imgcode' onClick='refresh_code();return false;' style='cursor:pointer;width:70px;height:30px'>");
+	
+	                                        </script><img id="imgcode" name="imgcode" onclick="refresh_code();return false;" style="cursor:pointer;width:70px;height:30px">
+	                                    </div>
+	                                    <div class="s2">
+	                                        <input type="text" value="" maxlength="4" class="yzboxa01inp" id="txt_mathcode">
+	                                        <input type="button" class="yzboxa01but" value="确认" id="btn_mathcode">
+	                                    </div>
+	                                </div>
+	                                <div class="yzboxa02">
+	                                    <div class="s1">
+	                                        <a href="javascript:void(0);" onclick="refresh_code();">看不清?</a>
+	                                    </div>
+	                                    <div class="s2" id="showWord">
+	                                        请输入文字
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="yzboxb">
+	                            </div>
+	                        </div>
+	                        <!--验证弹出 end-->
+	                    </li>
+	
+	                   
+	
+	                    <li>
+	                        <label></label>
+	                        <input type="button" value="立即开通" class="btnStyle" id="img_submit">
+	                    </li>
+	                    <li class="noMar gray9">
+	                        <label></label>
+	                        <input type="checkbox" checked="checked" id="agree" name="agree">我同意<a href="https://passport.fang.com/Register/ServiceInfo" class="blue">《房天下服务协议》</a>
+	                    </li>
+	                </ul>
+	            </div>
+
+	            <div class="rightLogin">
+				    <ul class="rightList">
+				        <li>已有通行证账号，请直接登录</li>
+				        <li class="btnBox">
+				            <input type="button" value="登 录" class="btnStyle" onclick="window.open(&#39;https://passport.fang.com&#39;)"></li>
+				        <li>您还可以用其他方式直接登录：</li>
+				        <li class="other">
+				            <a href="https://passport.fang.com/passport/QQLogin.aspx?type=pc&service=soufun-passport-web&backurl=">
+				                <img src="./160815_Fangtianxia_signIn_files/Connect_logo_qq.png" width="16" height="16" alt="腾讯QQ登录">
+				                QQ登录</a>
+				             <a href="https://passport.fang.com/passport/weixinlogin.aspx?service=soufun-passport-web&type=pc&backurl=">
+				                 <img src="./160815_Fangtianxia_signIn_files/Connect_logo_weixin.png" width="16" height="14" alt="微信登录">
+				                  微信登录</a>
+				             <br>
+				            <br>
+				            <a href="https://passport.fang.com/passport/weiboLogin.aspx?Service=soufun-passport-web&Type=pc&backurl=">
+				                <img src="./160815_Fangtianxia_signIn_files/Connect_logo_sina.png" width="14" height="16" alt="新浪微博登录">
+				                微博登录</a>
+				            <a href="https://passport.fang.com/passport/BaiduLogin.aspx?Service=soufun-passport-web&Type=pc&backurl=">
+				                <img src="./160815_Fangtianxia_signIn_files/login-short.png" alt="百度登录">
+				                百度登录</a>
+				        </li>
+				    </ul>
+				    <ul class="rightJjr">
+				        <li style="color:gray;">如果您是经纪人，请点击这里注册</li>
+				        <li><input type="button" value="搜房帮入口" class="btnStyle" onclick="window.open(&#39;http://agent.fang.com/AgentRegister.aspx&#39;)"></li>
+				    </ul>
+				    <ul class="rightJjr rightList">
+				        <li><input type="button" value="装修帮入口" class="btnStyle" style="background-color:#ffd800;border:3px solid #ffd800;border-bottom:3px solid #b9bb7d" onclick="window.open(&#39;http://dianpu.fang.com/register.aspx&#39;)"></li>
+				    </ul>
+				</div>
+	       </div>
+	    </form>
+
+		<script type="text/javascript">
+		    var _dctc = _dctc || {};
+		    _dctc._account = _dctc._account || ['UA-24140496-1', 'UA-24830455-1'];
+		    _dctc.isNorth = _dctc.isNorth || 'Y';
+		    _dctc.bid = '1';
+		    (function () {
+		        var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+		        script.src = 'https://static.soufunimg.com/count/load.min.js?20160330';
+		        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+		    })();
+		</script>
+	</body>
+</html>
