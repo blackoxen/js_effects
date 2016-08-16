@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var email = prompt();
+			var str ="Javascript is 'java' \"not\" Java QQ:55689 or \"java\" at javascript which email is 'nishang@163.com' URL:http://www.kingcera.com my and tel(电话):0731-83866669 or +86-731-84069186 adds 17th 湖南省长沙市漓湘西路8号 java";
+
+			var reg1 = /java/;
+			var reg2 = /java/i; 
+			//search()  返回第一个匹配字串的位置。忽略全局检索/g。
+			var sear1 = str.search(reg1);
+			var sear2 = str.search(reg2);
+			console.log(reg1 +":"+sear1);
+			console.log(reg2 +":"+sear2);
+			
+			//replace():第一个参数为RegExp或字符串；第二个参数是要替换的字符串。返回替换后的新字符串；原字符串不受影响。
+			var reg3 = /java/g;
+			var str3 = str.replace(reg3,"JAVA");
+			console.log(str3);
+			console.log(str);
+			
+			var reg4 = /"([^"]*)"/g;   //一段文本起始于引号，结束于引号；中间没有引号
+			var str4 = str.replace(reg4,'【$1】');
+			console.log(str4);
+			
+			var reg5 = /(\d+)/g;   //获取数字
+			var str5 = str.replace(reg5,'$1'+1);
+			console.log(str5);
+
+			//match():唯一参数为RegExp；
+		</script>
+	</body>
+</html>
