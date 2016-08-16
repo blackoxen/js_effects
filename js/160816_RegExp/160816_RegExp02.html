@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<input type="text" name="textfield" id="textfield" value="" />
+			<input type="button" value="提交" onclick="check()"/>
+		</form>
+		<script type="text/javascript">
+			function check(){
+				var inPut = document.getElementById('textfield').value;
+				var bool = isalphanumber(inPut);
+				alert(bool);
+			}
+			
+			function isalphanumber(str){
+				var result = str.match(/^[a-zA-Z0-9]+/);
+				if(result == null){
+					return false;
+				}else{
+					return true;
+				}
+			}
+		</script>
+		
+	</body>
+</html>
