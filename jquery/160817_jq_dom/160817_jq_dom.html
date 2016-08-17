@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../base/base.css"/>
+		<script src="../base/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div>
+			<p>耐磨陶瓷衬板系列</p>
+			<ul>
+				<li>直粘型</li>
+				<li>螺柱焊接型</li>
+				<li>高温抗冲击型</li>
+				<li>超耐磨抗冲击型</li>
+				<li>陶瓷橡胶复合型</li>
+			</ul>
+			<input type="button" name="" id="btn" value="click" />
+			<br />
+			<input type="text" id="address" value="请输入邮箱地址" />
+			<input type="text" name="password" id="password" value="请输入邮箱密码" />
+			<br />
+			<input type="button" name="" id="" value="登录" />
+			
+			<br />
+			<select name="" id="single">
+				<option value="">选择1号</option>
+				<option value="">选择2号</option>
+				<option value="">选择3号</option>
+			</select>
+			<select name="" id="multiplt" multiple="multiple" style="height: 120px;">
+				<option selected="selected">选择1号</option>
+				<option value="">选择2号</option>
+				<option value="">选择3号</option>
+				<option value="">选择4号</option>
+				<option selected="selected">选择5号</option>
+			</select> 
+			
+			
+			
+			
+			
+			
+			
+			<script>
+				console.log($("ul").html());
+				console.log($("li:eq(2)").html());
+				//$("ul").html("<li>超耐磨抗冲击型</li>");
+				console.log($("ul").text());
+				//$('div').text("hello");
+				
+				$("#address").focus(function(){
+					var txt_value = $(this).val();
+					if(txt_value == this.defaultValue){
+						$(this).val("");
+					}
+				}).blur(function(){
+					var txt_value = $(this).val();
+					if(txt_value == ""){
+						$(this).val(this.defaultValue);
+					}
+				})
+				
+				
+			</script>
+		</div>
+	</body>
+</html>
