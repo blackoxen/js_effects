@@ -1,0 +1,22 @@
+@charset "utf-8";
+/*css rest*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body,button,input,select,textarea {color:#555; font:12px/150% Arial, Helvetica, sans-serif, Simsun,Verdana,Microsoft YaHei, "微软雅黑",  "宋体", "黑体"; }
+td,th,caption { font-size:14px; }
+h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#555; text-decoration:none; }
+a:hover { text-decoration:none; }
+img { border:0;display:block; }
+sup{vertical-align: text-top;}
+sub{vertical-align: text-bottom;}
+ol,ul,li { list-style:none; display: block;}
+table { border-collapse:collapse; border-spacing: 0;}
+html {overflow-y: scroll;} 
+/* css common */
+.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix { *zoom:1; }
+.clear{clear:both;float:none; height: 0; overflow: hidden;}
+html .hide{display: none}
+/*body{background:#efeeea;}
+.container{	background:#fff;margin: 0 auto;	width:1200px;}*/

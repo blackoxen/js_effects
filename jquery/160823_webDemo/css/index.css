@@ -1,0 +1,13 @@
+#header{
+	background: url(../images/headerbg.png) repeat-x scroll 0 0 #fff;
+	height: 105px;
+}
+
+#header .contWidth{
+	position: relative;
+	height: 105px;
+	width: 990px;
+	margin: 0 auto;
+	z-index: 100;
+}
+
