@@ -1,0 +1,7 @@
+html,body{margin:0; padding:0;}
+.div1{height:400px; width:600px; background:red;}
+.div2{height:50px; width:150px; background:blue;}
+.div3{height:100px; width:350px; background:yellow;float:left;}
+.div4{height:150px; width:80px;background:#345;float:left;}
+.clear{clear: both;}
+.div5{height: 180px; width:220px; background:#E0F2BE; line-height: 180px; text-align: center;margin-left:20px;}
