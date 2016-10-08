@@ -58,7 +58,7 @@
 	filter:alpha(opacity=100);
 	}*/
 .titleBox p.active{
-	bottom:0px;
+	bottom:0px;			/*显示标题*/
 	}
 	
 /*-------------图标容器---------------*/

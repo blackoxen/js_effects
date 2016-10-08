@@ -8,33 +8,12 @@
 	</head>
 	<body>
 		<style type="text/css">
-			.tab_menu ul{
-				overflow: auto;
-				width: 250px;
-				background: #FFFFCC;
-			}
-			.tab_menu li{
-				float:left;
-				padding:2px 5px;
-				font-size: 16px;
-				/*background: #FF0000;*/
-			}
-			.tab_menu .hover,.tab_menu .on{
-				background: #FF0000;
-				color: #fff;
-				box-shadow: 2px 2px 2px #ccc;
-			}
-			.tab_box{
-				height: 200px;
-				width: 250px;
-				border: 1px solid #666;
-			}
-			.hide{
-				display:none;
-			}
-			.tab_box div{
-				font-size: 16px;
-			}
+			.tab_menu ul{overflow: auto;width: 250px;background: #FFFFCC;}
+			.tab_menu li{float:left;padding:2px 5px;font-size: 16px;/*background: #FF0000;*/}
+			.tab_menu .hover,.tab_menu .on{	background: #FF0000;color: #fff;box-shadow: 2px 2px 2px #ccc;}
+			.tab_box{height: 200px;	width: 250px;border: 1px solid #666;}
+			.hide{display:none;	}
+			.tab_box div{font-size: 16px;}
 		</style>
 		<div class="tab">
 			<div class="tab_menu">
@@ -56,9 +35,9 @@
 				//鼠标滑过实现选项卡切换：思路：hover()+类似triggle()模拟单击
 				$ul_li.hover(function(){
 					$(this).addClass("hover")
-							.addClass("on")   //再加上相同的样式
+							.addClass("on")   //再加上相同的样式:为了保证当鼠标移出此标签但是又不切换到别的标签时，该标签样式不变。
 							.siblings().removeClass("on");
-					var index = $ul_li.index(this);
+					var index = $ul_li.index(this);  //获取当前标签的索引：通过索引序号来匹配标签和要显示的div
 					$(".tab_box > div").eq(index).show()
 					                			.siblings().hide();		
 				},function(){

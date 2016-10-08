@@ -22,7 +22,7 @@ $(document).ready(function() {
 		// 图片轮换函数
 		var rotate=function(clickID){
 			if(clickID){ nextID = clickID; }
-			else{ nextID=activeID<=3 ? activeID+1 : 1; }
+			else{ nextID=activeID<=4 ? activeID+1 : 1; }   //图片切换的索引，从0开始
 			// 交换图标
 			$(icoArr[activeID-1]).removeClass("active");
 			$(icoArr[nextID-1]).addClass("active");
