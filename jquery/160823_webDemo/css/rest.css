@@ -14,9 +14,8 @@ ol,ul,li { list-style:none; display: block;}
 table { border-collapse:collapse; border-spacing: 0;}
 html {overflow-y: scroll;} 
 /* css common */
-.clearfix:after {content: "."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix:after {content:""; display: block; height:0; clear:both; visibility: hidden;}
 .clearfix { *zoom:1; }
-.clear{clear:both;float:none; height: 0; overflow: hidden;}
 html .hide{display: none}
 /*body{background:#efeeea;}
 .container{	background:#fff;margin: 0 auto;	width:1200px;}*/

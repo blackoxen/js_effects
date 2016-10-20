@@ -1,14 +1,47 @@
-#header{
-	background: url(../images/headerbg.png) repeat-x scroll 0 0 #fff;
-	height: 105px;
-}
+#header{background: url(../images/headerbg.png) repeat-x scroll 0 0 #fff;height: 105px;}
+#header .container{	z-index: 100;position: relative;	height: 105px;	width: 990px;	margin: 0 auto;	}
+#header .logo{float:left; margin: 0 0 0 10px; color: #fff; line-height: 80px;}
+#header .search{position:absolute; left: 198px; top:20px;}
 
-#header .contWidth{
-	position: relative;
-	height: 105px;
-	width: 990px;
-	margin: 0 auto;
-	z-index: 100;
-}
+#header #skin{float: right; margin: 10px; padding:10px; width:120px;}
+#header #skin li{float:left; text-indent: -9999px; background:url(../images/theme.gif); height:15px; width:15px; overflow:hidden; margin-right:4px;}
+#header #skin #skin_0{ background-position: 0 0;}
+#header #skin #skin_1{background-position:15px 0;}
+#header #skin #skin_2{background-position:35px 0;}
+#header #skin #skin_3{background-position:55px 0;}
+#header #skin #skin_4{background-position:75px 0;}
+#header #skin #skin_5{background-position:95px 0;}
+#header #skin #skin_0.selected{background-position:0 15px;}
+#header #skin #skin_1.selected{background-position:15px 15px;}
+#header #skin #skin_2.selected{background-position:35px 15px;}
+#header #skin #skin_3.selected{background-position:55px 15px;}
+#header #skin #skin_4.selected{background-position:75px 15px;}
+#header #skin #skin_5.selected{background-position:95px 15px;}
+
+#header .mainNav{z-index:100;position:absolute; top:68px; left:0; height:37px; line-height:37px; width:990px;background:#4A4A4A;}
+#header .mainNav ul{display: inline; float:left; margin-left: 25px;}
+#header .mainNav ul li{z-index:100; position:relative; float:left; margin-right: 14px; }
+#header .mainNav ul li a{display: block; padding:0 8px; font-weight: bold; color:#fff; font-size: 14px;}
+#header .jnNav{display:none; z-index:110; position:absolute; overflow: hidden; top:37px; left: 0; width:474px; border:1px solid #B1B1B1; border-top:0px; background:#fff;}
+#header .jnNav .subitem{float:left; height: auto !important; min-height:100px; width:450px; padding:10px 12px;}
+#header .jnNav .subitem dl{float:left; overflow:hidden ; border-top:1px dashed #C4C4C4; padding:8px 0;}
+#header .jnNav .subitem dl dt{float:left; width:76px; line-height:16px; text-align:center; padding:4px 3px; font-weight: blod;}
+#header .jnNav .subitem dl dd{float:left; overflow:hidden ; padding:0 ; width:364px;}
+
+#content{position:relative; width:990px; margin:0 auto; }
+#content .janeshop{overflow:hidden; height:560px; padding:10px 0;}
+#content .janeshop #jnCatalog{float:left; overflow: hidden; height:560px; width:187px; margin:0 11px 0 0;}
+#content .janeshop #jnCatalog h2{height:30px; line-height:30px; color:#fff; font-size:12px; text-indent:13px; background:#6e6e6e;}
+#content .janeshop #jnCatalog .jnCatainfo{width:165px; height:524px; padding:5px 10px 0 10px; border: 1px solid #6e6e6e; border-style:none solid solid ; border-width:0 1px 1px;}
+#content .janeshop #jnCatalog .jnCatainfo h3{width:164px; height:24px; line-height:24px; border-bottom: 1px solid #eeeeee;}
+#content .janeshop #jnCatalog .jnCatainfo ul{float:left;}
+#content .janeshop #jnCatalog .jnCatainfo ul li{position:relative; float:left; height:24px; line-height:24px; width:79px; color:#aeadae; overflow:hidden;};
+#content .janeshop #jnCatalog .jnCatainfo ul li a{color:#444444;}
+#content .janeshop #jnCatalog .jnCatainfo ul li a:hover{color:#008cd7; text-decoration:underline;}
+#content .janeshop #jnCatalog .jnCatainfo ul li a.promoted{color:#f9044e;}
+#content .janeshop #jnCatalog .jnCatainfo ul li .hot{position:absolute; top:0; width:21px; height:16px; background:url(../images/hot.gif) no-repeat scroll 0 0 transparent;}
 
 
+#content .janeshop #jnImageroll{position:relative; float:left;overflow:hidden; width:550px; height:320px; margin:0 11px 0 0 ; }
+#content .janeshop #jnNotice{float:left; overflow: hidden; height:321px; width:230px;}
+#content .janeshop #jnBrand{float:left; overflow:hidden; width:790px; height: 230px; margin:10px 0 0;}
