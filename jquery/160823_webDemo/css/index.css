@@ -39,9 +39,11 @@
 #content .janeshop #jnCatalog .jnCatainfo ul li a{color:#444444;}
 #content .janeshop #jnCatalog .jnCatainfo ul li a:hover{color:#008cd7; text-decoration:underline;}
 #content .janeshop #jnCatalog .jnCatainfo ul li a.promoted{color:#f9044e;}
-#content .janeshop #jnCatalog .jnCatainfo ul li .hot{position:absolute; top:0; width:21px; height:16px; background:url(../images/hot.gif) no-repeat scroll 0 0 transparent;}
+#content .janeshop #jnCatalog .jnCatainfo ul li a i.hot{position:absolute; top:0; width:21px; height:16px; background:url(../images/hot.gif) no-repeat scroll 0 0 transparent;}
 
 
 #content .janeshop #jnImageroll{position:relative; float:left;overflow:hidden; width:550px; height:320px; margin:0 11px 0 0 ; }
 #content .janeshop #jnNotice{float:left; overflow: hidden; height:321px; width:230px;}
 #content .janeshop #jnBrand{float:left; overflow:hidden; width:790px; height: 230px; margin:10px 0 0;}
+
+
