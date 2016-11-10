@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JSON</title>
+	</head>
+	<body>
+		<h2>创建JSON:JavaScript Object Notation</h2>
+		<p>
+			网站名称：<span id="jname"></span><br />
+			网站地址：<span id="jurl"></span><br />
+			网站slogan：<span id="jslogan"></span><br />
+		</p>	
+		<script>
+			var JSONObject ={
+				"name":"湖南精城特种陶瓷有限公司",
+				"url":"www.fangmo.com",
+				"slogan":"您信赖的设备防磨专家",
+			};
+			document.getElementById("jname").innerHTML = JSONObject.name;
+			document.getElementById("jurl").innerHTML = JSONObject.url;
+			document.getElementById("jslogan").innerHTML = JSONObject.slogan;
+		</script>
+	</body>
+</html>
