@@ -1,0 +1,772 @@
+/*适应pad*/
+/*适应pad*/
+
+
+@media screen and (max-width: 640px) {
+	#logo{height:80px; background-size:5px 108px;}
+	#logo .ico-home{background-size:35.6px 30.8px;height:80px;}
+	.logo2{
+		background-size:150.4px 40.8px;
+	}
+	#kzk {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+		#logo #title{margin:3% 11% 1% 17%;}
+
+	#logo #title img{ width:238px; height:auto;}
+
+		#logo .pho{ font-size:0.9em; padding-top:23px;}
+
+        /*主导航样式*/
+
+		#nav{ width:100%; background:#e9e9e9; padding-bottom:0.8%; max-height:50px; line-height:50px; font-size:1em;}
+
+		#nav ul li{ float:left; width:15%; margin-left:1.66%; text-align:center;}
+
+		#nav ul li a{ color:#5e5e5e;}
+
+		#nav ul li a:hover,#nav ul li .xuanz{  border-bottom:3px solid #2a408b; color:#2a408b; display:block;}
+
+		#nav ul li a:hover{ color:#2a408b;}
+		
+	 /**============底部=================**/
+	 
+	 .footer{ }
+
+	#bottom{ font-size:0.7em;}
+     /*ios课程专题*/
+	
+	#jiuye .h2,#jiuye .h2p{ line-height:1.4em;}
+    #jiuye .h2{ font-size:1.4em;}
+	#jiuye .h21{ font-size:1.2em;}
+	#jiuye .h2p{ font-size:1em; margin-bottom:3%;}
+		
+	#jiuye .jyxy li{ margin-left:4%;}
+	
+		
+	#jiuye .jyxy li .wzbtm p{ font-size:0.8em;}
+	
+	#jiuye .jyxy li .jz{ line-height:1em; margin:8% 0;}
+	
+	#jiuye .jyxy li .jz span{ font-size:0.8em;}
+	
+	#jiuye .jyxy li .jz .dazi{ font-size:1em;}
+	
+	/*滚动部分*/
+	
+    .scroll{font-size:0.9em;height:280px;}
+	
+	.scroll .xbgdxx td{  padding:1% 0; background:url("../images/dian.jpg") no-repeat 0.5em 0.6em; background-size:2px; padding-left:1em;}
+	
+    /*不用装逼，iOS培训就是高逼格的代名词*/
+		
+    #jiuye .kc_lb li .wzbtm{ top:39%;font-size:0.8em; }
+	
+    #jiuye .kc_lb li .kc_nr{ font-size:0.6em; height:10em;
+         /* Gecko browsers */
+		-moz-border-radius-bottomleft: 10px;
+		-moz-border-radius-bottomright: 10px;
+		/* Webkit browsers */
+		-webkit-border-bottom-left-radius: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+		/* W3C syntax */
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius:  10px;
+	 }
+	 
+	 /*不用装逼，iOS培训就是高逼格的代名词*/
+		
+    #jiuye .kc_lb1 li .wzbtm{ top:36%;font-size:0.8em; }
+	
+    #jiuye .kc_lb1 li .kc_nr{ font-size:0.6em; height:10em;
+         /* Gecko browsers */
+		-moz-border-radius-bottomleft: 10px;
+		-moz-border-radius-bottomright: 10px;
+		/* Webkit browsers */
+		-webkit-border-bottom-left-radius: 10px;
+		-webkit-border-bottom-right-radius: 10px;
+		/* W3C syntax */
+		border-bottom-right-radius: 10px;
+		border-bottom-left-radius:  10px;
+	 }
+	
+    /*就业企业Bigger than Bigger*/
+	#jiuye .h3{ font-size:1.1em;}
+
+	#jiuye .h3{ margin-top:4%;}
+	
+	/*iOS软件工程师行情屌炸天*/
+	
+    .jyl li{ width:25%; margin-left:0%;}
+	
+	.jyl li p{ margin-top:5%; font-size:0.5em;}
+	
+	.jyl li p span.bai{ font-size:3em; font-weight:bold;}
+	/*iOS软件工程师行情屌炸天*/
+	
+    .jy2 li{  margin-left:0%;}
+	
+	.jy2 li p{ margin-top:5%; font-size:0.5em;}
+	
+	.jy2 li p span.bai{ font-size:3em; font-weight:bold;}
+	
+	/*iOS软件工程师行情屌炸天*/
+	
+    .tach{ width:28%; height:14em; color:#fff; float:left; margin-left:4%; margin-bottom:4%;}
+
+	.tach .mingz_1{ font-size:1.5em;}
+	
+	.tach .mingz{ font-size:0.8em;}
+	
+	.tach .jingy{ font-size:0.8em; line-height:1.6em;}
+	
+	.tach .jingy p img{ width:20%;}
+	
+	/*手机专享"0元试学"*/
+
+	.sech h1{ font-size:1.2em;}
+	
+	.sech .h1p{ font-size:0.8em;}
+	
+	#qqa{ font-size:1em;}
+	
+	
+	.qqk1 input{width:95%;}
+	
+	.sech .fom_bom input{ width:100%; font-size:1em; padding:3%;}
+	/*表格*/
+	
+	.main_bg{font-size:0.8em;}
+
+	.ask_lists{height:180px;}
+
+	.biaog{height:30px;line-height:30px;}
+		   
+	.ask_lists li p.c1{width:10.6%;}
+	.ask_lists li p.c7{width:10.6%;}
+	.ask_lists li p.c3{width:30%;}
+	.ask_lists li p.c4{width:10.6%;}
+	.ask_lists li p.c5{width:25.85%;}
+	.ask_lists li p.c9{width:11.2%;border-right:1px solid #000;}
+	
+	
+	.biaog li p.c1{width:10.6%;}
+	.biaog li p.c7{width:10.6%;}
+	.biaog li p.c3{width:30%;}
+	.biaog li p.c4{width:10.6%;}
+	.biaog li p.c5{width:25.85%;}
+	.biaog li p.c9{width:11.2%;border-right:1px solid #000;}
+}
+
+@media screen and (max-width: 480px) {
+		#kzk { margin: 0 auto;width: 100%; min-width:320px; }
+		
+		#logo{ height:50px;}
+		
+		#logo .ico-home{ background-size:25px 20px; height:50px; }
+		
+		.logo2{ background-size:100px 30px;}
+	
+		#logo #title{margin:3% 11% 1% 15%; width:25%}
+
+		#logo #title img{ width:100%;}
+
+		#logo .pho{ font-size:0.7em;padding-top:11px;}
+		
+        /*主导航样式*/
+
+		#nav{ padding-bottom:0.8%; max-height:40px; line-height:40px; font-size:1em;}
+
+		#bottom{font-size:0.5em;}
+		
+		 /*ios课程专题*/
+		
+		#jiuye .h2,#jiuye .h2p{ line-height:1.3em;}
+		
+		#jiuye .h2{ font-size:1.2em;}
+		#jiuye .h21{ font-size:1em;}
+		#jiuye .h2p{ font-size:0.9em; margin-bottom:3%;}
+			
+		#jiuye .jyxy li{ margin-left:4%;}
+
+			
+		#jiuye .jyxy li .wzbtm p{ font-size:0.6em;}
+		
+		#jiuye .jyxy li .wzbtm p span{ font-size:1.8em;}
+		
+		#jiuye .jyxy li .jz{ line-height:1em; margin:8% 0;}
+		
+		#jiuye .jyxy li .jz span{ font-size:0.8em;}
+		
+		#jiuye .jyxy li .jz .dazi{ font-size:1em;}
+		
+		/*滚动部分*/
+		
+		.scroll{font-size:0.9em;height:270px;}
+		
+		.scroll .xbgdxx td{  padding:1% 0; background:url("../images/dian.jpg") no-repeat 0.5em 0.6em; background-size:1px; padding-left:1em;}
+		
+		 /*不用装逼，iOS培训就是高逼格的代名词*/
+		#jiuye .kc_lb li .wzbtm,#jiuye .kc_lb li .wzbtm1{ top:31%;font-size:0.6em; padding:2% 0;}
+		
+		#jiuye .kc_lb li .kc_nr{ font-size:0.6em; height:10em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+		 
+		 /*不用装逼，iOS培训就是高逼格的代名词*/
+		#jiuye .kc_lb1 li .wzbtm{ top:30%;font-size:0.6em; padding:2% 0;}
+		
+		#jiuye .kc_lb1 li .kc_nr{ font-size:0.6em; height:10em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+		/*iOS软件工程师行情屌炸天*/
+	
+    .jyl li{ width:25%; margin-left:0%;}
+	
+	.jyl li p{ margin-top:5%; font-size:0.4em;}
+	
+	.jyl li p span.bai{ font-size:2.5em; font-weight:bold;}
+	
+	/*iOS软件工程师行情屌炸天*/
+	
+    .jy2 li{  margin-left:0%;}
+	
+	.jy2 li p{ margin-top:5%; font-size:0.4em;}
+	
+	.jy2 li p span.bai{ font-size:2.5em; font-weight:bold;}
+	
+		
+		 /*iOS软件工程师行情屌炸天*/
+    .tach{ height:11.2em;}
+	.tach .mingz{ font-size:1em;}
+	
+	.tach .jingy{ font-size:0.8em; line-height:1.6em;}
+	
+	.tach .jingy p img{ width:30%;}
+	.tach p{ font-size:0.8em;}
+	
+	.tach .mingz_1{ font-size:1em;}
+	/*表格*/
+		.main_bg{font-size:1.2em;}
+	
+		.ask_lists{height:180px;}
+	
+		.biaog{height:30px;line-height:30px;}
+			   
+		.ask_lists li p.c1{width:10.6%;}
+		.ask_lists li p.c7{width:10.6%;}
+		.ask_lists li p.c3{width:30%;}
+		.ask_lists li p.c4{width:10.6%;}
+		.ask_lists li p.c5{width:25%;}
+		.ask_lists li p.c9{width:11.5%;border-right:1px solid #000;}
+		
+		
+		.biaog li p.c1{width:10.6%;}
+		.biaog li p.c7{width:10.6%;}
+		.biaog li p.c3{width:30%;}
+		.biaog li p.c4{width:10.6%;}
+		.biaog li p.c5{width:25%;}
+		.biaog li p.c9{width:11.5%;border-right:1px solid #000;}
+
+  }
+  
+  /*苹果6*/
+@media screen and (max-width: 375px) {
+	
+	#kzk { margin: 0 auto;width: 100%; min-width:320px; }
+		
+		#logo{ height:50px;}
+		
+		#logo .ico-home{ background-size:25px 20px; height:50px; }
+		
+		.logo2{ background-size:100px 30px;}
+	
+		#logo #title{margin:3% 11% 1% 15%; width:25%}
+
+		#logo #title img{ width:100%;}
+
+		#logo .pho{ font-size:0.7em;padding-top:11px;}
+		
+        /*主导航样式*/
+
+		#nav{ padding-bottom:0.8%; max-height:40px; line-height:40px; font-size:1em;}
+
+		#bottom{font-size:0.5em;}
+		
+		 /*ios课程专题*/
+		
+		#jiuye .h2,#jiuye .h2p{ line-height:1.2em;}
+		
+		#jiuye .h2{ font-size:1em;}
+		#jiuye .h21{ font-size:0.9em;}
+		#jiuye .h2p{ font-size:0.8em; margin-bottom:3%;}
+			
+		#jiuye .jyxy li{ margin-left:4%;}
+
+			
+		#jiuye .jyxy li .wzbtm p{ font-size:0.6em;}
+		
+		#jiuye .jyxy li .wzbtm p span{ font-size:1.8em;}
+		
+		#jiuye .jyxy li .jz{ line-height:1em; margin:8% 0;}
+		
+		#jiuye .jyxy li .jz span{ font-size:0.8em;}
+		
+		#jiuye .jyxy li .jz .dazi{ font-size:1em;}
+		
+		/*滚动部分*/
+		
+		.scroll{font-size:0.8em;height:230px;}
+		
+		.scroll .xbgdxx td{  padding:1% 0; background:url("../images/dian.jpg") no-repeat 0.5em 0.6em; background-size:1px; padding-left:1em;}
+		
+		 /*不用装逼，iOS培训就是高逼格的代名词*/
+		#jiuye .kc_lb li .wzbtm,#jiuye .kc_lb li .wzbtm1{ top:28%;font-size:0.6em; padding:2% 0;}
+		
+		#jiuye .kc_lb li .kc_nr{ font-size:0.5em; height:10em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+		 
+		 /*不用装逼，iOS培训就是高逼格的代名词*/
+		#jiuye .kc_lb1 li .wzbtm{ top:25.5%;font-size:0.6em; padding:2% 0;}
+		
+		#jiuye .kc_lb1 li .kc_nr{ font-size:0.5em; height:10em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+	/*就业企业Bigger than Bigger*/
+	#jiuye .h3{ font-size:0.8em;}
+
+	#jiuye .h3{ margin-top:4%;}
+	
+
+		/*iOS软件工程师行情屌炸天*/
+	
+    .jyl li{ width:25%; margin-left:0%;}
+	
+	.jyl li p{ margin-top:5%; font-size:0.3em;}
+	
+	.jyl li p span.bai{ font-size:2.3em; font-weight:bold;}
+	
+	/*iOS软件工程师行情屌炸天*/
+	
+    .jy2 li{ margin-left:0%;}
+	
+	.jy2 li p{ margin-top:5%; font-size:0.3em;}
+	
+	.jy2 li p span.bai{ font-size:2.3em; font-weight:bold;}
+	
+		
+		 /*iOS软件工程师行情屌炸天*/
+    .tach{ height:9em;}
+	.tach .mingz{ font-size:0.9em;}
+	
+	.tach .jingy{ font-size:0.7em; line-height:1.6em;}
+	
+	.tach .jingy p img{ width:30%;}
+	.tach p{ font-size:0.7em;}
+	
+	.tach .mingz_1{ font-size:1em;}
+	
+	/*表格*/
+		.main_bg{font-size:1.1em;}
+	
+		.ask_lists{height:180px;}
+	
+		.biaog{height:30px;line-height:30px;}
+			   
+		.ask_lists li p.c1{width:10.6%;}
+		.ask_lists li p.c7{width:10.6%;}
+		.ask_lists li p.c3{width:27%;}
+		.ask_lists li p.c4{width:10.6%;}
+		.ask_lists li p.c5{width:25%;}
+		.ask_lists li p.c9{width:14.23%;border-right:1px solid #000;}
+		
+		
+		.biaog li p.c1{width:10.6%;}
+		.biaog li p.c7{width:10.6%;}
+		.biaog li p.c3{width:27%;}
+		.biaog li p.c4{width:10.6%;}
+		.biaog li p.c5{width:25%;}
+		.biaog li p.c9{width:14.23%;border-right:1px solid #000;}
+	}
+
+
+@media screen and (max-width: 360px) {
+	
+		#bottom{font-size:0.5em; padding-bottom:35px;}
+		 /*ios课程专题*/
+		
+		#jiuye .h2,#jiuye .h2p{ line-height:1.3em;}
+		
+		#jiuye .h2{ font-size:1em;}
+		
+		#jiuye .h21{ font-size:0.9em;}
+	
+		#jiuye .h2p{ font-size:0.8em; margin-bottom:3%;}
+			
+		#jiuye .jyxy li{ margin-left:4%;}
+		
+		
+	    #jiuye .jyxy li .wzbtm p{ font-size:0.6em;}
+
+		#jiuye .jyxy li .wzbtm p span{ font-size:1.8em;}
+		
+		#jiuye .jyxy li .jz{ line-height:1em; margin:8% 0;}
+		
+		#jiuye .jyxy li .jz span{ font-size:0.7em;}
+		
+		#jiuye .jyxy li .jz .dazi{ font-size:0.9em;}
+		
+		/*滚动部分*/
+		
+		.scroll{font-size:0.7em;height:200px;}
+		
+		.scroll .xbgdxx td{  padding:1% 0; background:url("../images/dian.jpg") no-repeat 0.5em 0.6em; background-size:1px; padding-left:1em;}
+		
+		 /*不用装逼，iOS培训就是高逼格的代名词*/
+		#jiuye .kc_lb li .wzbtm,#jiuye .kc_lb li .wzbtm1{ top:31%;font-size:0.6em; padding:2% 0;}
+		
+		#jiuye .kc_lb li .kc_nr{ font-size:0.4em; height:10em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+		 
+		  /*不用装逼，iOS培训就是高逼格的代名词*/
+		#jiuye .kc_lb1 li .wzbtm{ top:27.5%;font-size:0.6em; padding:2% 0;}
+		
+		#jiuye .kc_lb1 li .kc_nr{ font-size:0.4em; height:10em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+		 /*就业企业Bigger than Bigger*/
+	#jiuye .h3{ font-size:0.8em;}
+
+	#jiuye .h3{ margin-top:4%;}
+		/*iOS软件工程师行情屌炸天*/
+	
+    .jyl li{ width:25%; margin-left:0%;}
+	
+	.jyl li p{ margin-top:5%; font-size:0.3em;}
+	
+	.jyl li p span.bai{ font-size:2em; font-weight:bold;}
+	
+	/*iOS软件工程师行情屌炸天*/
+	
+    .jy2 li{  margin-left:0%;}
+	
+	.jy2 li p{ margin-top:5%; font-size:0.3em;}
+	
+	.jy2 li p span.bai{ font-size:2em; font-weight:bold;}
+	
+		
+		 /*老师*/
+    .tach{ height:9em;}
+	.tach .mingz{ font-size:0.8em;}
+	
+	.tach .jingy{ font-size:0.7em; line-height:1.6em;}
+	
+	.tach .jingy p img{ width:30%;}
+	.tach p{ font-size:0.8em;}
+	
+	.tach .mingz_1{ font-size:1em;}
+
+	/*表格*/
+		.main_bg{font-size:1em;}
+	
+		.ask_lists{height:180px;}
+	
+		.biaog{height:30px;line-height:30px;}
+			   
+		.ask_lists li p.c1{width:10.6%;}
+		.ask_lists li p.c7{width:10.6%;}
+		.ask_lists li p.c3{width:27%;}
+		.ask_lists li p.c4{width:10.6%;}
+		.ask_lists li p.c5{width:25%;}
+		.ask_lists li p.c9{width:14.15%;border-right:1px solid #000;}
+		
+		
+		.biaog li p.c1{width:10.6%;}
+		.biaog li p.c7{width:10.6%;}
+		.biaog li p.c3{width:27%;}
+		.biaog li p.c4{width:10.6%;}
+		.biaog li p.c5{width:25%;}
+		.biaog li p.c9{width:14.15%;border-right:1px solid #000;}
+	
+	}
+
+@media screen and (max-width: 320px) {
+	
+	#logo{height:40px;}
+	
+	#logo .ico-home{background-size:23px 18px;height:40px;}
+	
+	.logo2{background-size:90px 25px;}
+	
+	#kzk {margin: 0 auto; max-width: 100%;}
+
+		#logo #title{margin:3% 11% 1% 17%;}
+
+
+		#logo .pho{ font-size:0.6em; padding-top:8px;}
+
+        /*主导航样式*/
+
+		#nav{ width:100%; background:#e9e9e9; padding-bottom:0.8%; max-height:35px; line-height:35px; font-size:0.8em;}
+
+		#nav ul li{ float:left; width:15%; margin-left:1.66%; text-align:center;}
+
+		#nav ul li a{ color:#5e5e5e;}
+
+		#nav ul li a:hover,#nav ul li .xuanz{  border-bottom:3px solid #2a408b; color:#2a408b; display:block;}
+
+		#nav ul li a:hover{ color:#2a408b;}
+		
+	 /**============底部=================**/
+	#bottom{font-size:0.5em;}
+	/*就业企业Bigger than Bigger*/
+	#jiuye .h3{ font-size:0.6em;}
+
+	#jiuye .h3{ margin-top:4%;}
+	
+	/*iOS软件工程师行情屌炸天*/
+	
+    .jyl li{ width:25%; margin-left:0%;}
+	
+	.jyl li p{ margin-top:5%; font-size:0.3em;}
+	
+	.jyl li p span.bai{ font-size:1.8em; font-weight:bold;}
+	
+	/*iOS软件工程师行情屌炸天*/
+	
+    .jy2 li{ margin-left:0%;}
+	
+	.jy2 li p{ margin-top:5%; font-size:0.3em;}
+	
+	.jy2 li p span.bai{ font-size:1.8em; font-weight:bold;}
+    /*ios课程专题*/
+	
+	#jiuye .h2,#jiuye .h2p{ line-height:1.3em;}
+	
+    #jiuye .h2{ font-size:0.8em;}
+	#jiuye .h21{ font-size:0.7em;}
+
+	#jiuye .h2p{ font-size:0.6em; margin-bottom:3%;}
+		
+	#jiuye .jyxy li{ margin-left:4%;}
+	
+		
+	#jiuye .jyxy li .wzbtm p{ font-size:0.5em;}
+	
+	#jiuye .jyxy li .wzbtm p span{ font-size:1.6em;}
+	
+	#jiuye .jyxy li .jz{ line-height:0.8em;}
+	
+	#jiuye .jyxy li .jz span{ font-size:0.5em;}
+	
+	#jiuye .jyxy li .jz .dazi{ font-size:0.8em;}
+
+	/*滚动部分*/
+	
+	.scroll{font-size:0.7em; letter-spacing:0px;height:200px;}
+	
+	.scroll .xbgdxx td{  padding:1% 0; background:url("../images/dian.jpg") no-repeat 0 0.8em; background-size:1px; padding-left:0.5em;}
+     /*不用装逼，iOS培训就是高逼格的代名词*/
+			
+		#jiuye .kc_lb li .wzbtm,#jiuye .kc_lb li .wzbtm1{ top:27%;font-size:0.5em; padding:2% 0;}
+		
+		#jiuye .kc_lb li .kc_nr{ font-size:0.4em; height:12em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+		 
+		 
+		  /*不用装逼，iOS培训就是高逼格的代名词*/
+			
+		#jiuye .kc_lb1 li .wzbtm{ top:24%;font-size:0.5em; padding:2% 0;}
+		
+		#jiuye .kc_lb1 li .kc_nr{ font-size:0.4em; height:12em;
+			 /* Gecko browsers */
+			-moz-border-radius-bottomleft: 10px;
+			-moz-border-radius-bottomright: 10px;
+			/* Webkit browsers */
+			-webkit-border-bottom-left-radius: 10px;
+			-webkit-border-bottom-right-radius: 10px;
+			/* W3C syntax */
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius:  10px;
+		 }
+    /*iOS软件工程师行情屌炸天*/
+    .tach{ height:7.7em;}
+	.tach .mingz{ font-size:0.6em;}
+	
+	.tach .jingy{ font-size:0.6em; line-height:1.6em;}
+	
+	.tach .jingy p img{ width:30%;}
+	.tach p{ font-size:0.8em;}
+	
+	.tach .mingz_1{ font-size:1em;}
+	
+	/*手机专享"0元试学"*/
+
+	.sech h1{ font-size:1em;}
+	
+	.sech .h1p{ font-size:0.6em;}
+	
+	#qqa{ font-size:0.8em;}
+	
+	
+	
+	.sech .fom_bom input{ width:100%; font-size:0.8em; padding:3%;}
+		/*表格*/
+		.main_bg{font-size:0.9em;}
+	
+		.ask_lists{height:180px;}
+	
+		.biaog{height:30px;line-height:30px;}
+			   
+		.ask_lists li p.c1{width:10.6%;}
+		.ask_lists li p.c7{width:10.6%;}
+		.ask_lists li p.c3{width:26%;}
+		.ask_lists li p.c4{width:10.6%;}
+		.ask_lists li p.c5{width:25.5%;}
+		.ask_lists li p.c9{width:14.41%;border-right:1px solid #000;}
+		
+		
+		.biaog li p.c1{width:10.6%;}
+		.biaog li p.c7{width:10.6%;}
+		.biaog li p.c3{width:26%;}
+		.biaog li p.c4{width:10.6%;}
+		.biaog li p.c5{width:25.5%;}
+		.biaog li p.c9{width:14.41%;border-right:1px solid #000;}
+
+
+		
+		
+		
+	
+/***************************增加样式开始*****************************/	
+	
+	
+	
+	/*c++*/
+
+
+.c_jd3{ font-size:1em; overflow:hidden; color:#fff;}
+
+.c_jd3 dl{ font-size:0.7em;}
+.c_jd3 dl dt:nth-child(1){ font-size:1.2em;}
+
+.c_jd3 dl dt:nth-child(2){ font-size:1em; }
+
+.c_jd3_1{ clear:both;}
+
+
+
+	
+	
+	
+	
+/***********************增加样式结束*******************************/
+
+		
+	
+	}
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

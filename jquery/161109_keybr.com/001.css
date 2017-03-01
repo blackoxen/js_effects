@@ -13,6 +13,27 @@ jquery :first :last :not() :even :odd :eq() :gt() :lt() :header :animated :focus
 :contains() :empty() :has(selector) :parent :hidden :visible;
 attribute=value attribute 
 :nth-child index;even;odd;equation  index index index even 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 header background url repeat scrol height px header container z-index position relative width 
 height width var middle auto left right middle  margin border  margin-top margin-right margin-bottom
 margin-left border-top border-right border-bottom border-left padding-top padding-left padding-bottom
@@ -262,6 +283,14 @@ class extends implements imterface import package boolean byte char short int lo
 false true null break case continue default for do while if else return switch 
 catch finally throw throws try abstract final native private protected public static 
 aynchronized transient colatile instanceof new this super void 
+
+
+
+class extends implements imterface import package booleam byte char short int long float doubel
+false true nul break case continue default for do  while if else return switch 
+catch finally throw throws try abstract final native private rotected public static
+aynchronized transient colatile instanceof new this ruper void
+
 
 
  *
