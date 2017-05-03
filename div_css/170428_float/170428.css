@@ -1,0 +1,20 @@
+.div1{display:none;}
+.img1{height: 150px;}
+
+.news{width:550px; padding:5px; border:1px solid blueviolet;}
+.news .date{float:right;}
+.news .title:hover{color:#EE542A; text-decoration:underline;}
+
+nav ul {overflow: auto;}
+nav ul li{float:left; width:100px;}
+nav ul li dl dt{font-weight:bold;}
+nav ul li dl dd{display: none;}
+nav ul li dl:hover dd{display: block;}
+
+.subNav{width:398px;border:1px solid plum;}
+.subNav .column{overflow:auto;}
+.subNav .column li{float:left; width:132px; text-align: center; height: 35px; line-height: 35px; font-weight: bolder; border-bottom:1px solid plum;}
+.subNav .column .new,.subNav .column .tech{border-right:1px solid plum;}
+.subNav .content{overflow: hidden; height: 80px; padding-left:5px;}
+
+

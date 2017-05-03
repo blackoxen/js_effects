@@ -8,7 +8,7 @@ html,body{margin:0; padding:0;}
 .div6{text-indent: 2em;}
 .div6>img{float:left;}
 .div7{/*float: left;*/ border: 1px solid salmon;}
-img{height: auto; width: 200px; float: left;}
+img{height: auto; width: 200px; /*float: left*/;}
 .clearfix:after{content: ''; display: table; clear: both;}
 .clearfix{*zoom:1;}
 .div8{border:1px solid darkgreen; /*width:550px;*/}
@@ -18,8 +18,21 @@ img{height: auto; width: 200px; float: left;}
 .nav ul li a{display: block; float:left; height: 35px; line-height: 35px; background:#ccc; padding: 0 10px;border-radius: 3px;margin-right: 2px; box-shadow:2px 2px 2px #003399 ;}
 .nav ul li a:hover{background:#DF3031; box-shadow:2px 2px 2px green ;}
 
+.div9{position:relative; top:0px;left: 80px; background:green;height: 150px; width:150px;/*padding:20px;*/}
+.div10{position:relative; top:0px;left:15px;background:#FF7300;height: 50px; width:80px;}
 
+.weilei p:first-child{font-weight:bold;}
+.weilei li:first-child{text-transform: uppercase; color:red;}
+.weilei p::first-letter{color:blue;}
 
+.div11{float:left; width:80px; height:75px; background-color: #ff1;}
+.div12{width:150px; height:100px; background-color:#134233;}
+.div13{width:180px; height:150px; background-color:#FF0000;}
 
-.div9{position:relative; top:80px;left: 80px; background:green;height: 150px; width:150px;/*padding:20px;*/}
-.div10{position:relative; top:40px;left:15px;background:#FF7300;height: 50px; width:80px;}
+.div14{width:120px; height:180px; background-color:#0000FF;}
+.div15{width:150px; height:200px; background-color:#FBACAC;}
+.div16{width:250px; height: 250px; background-color: #0088CC;}
+.div17,.div18{border:1px solid blue; padding:3px; margin: 3px;}
+.div18{float:left;}
+/*.img18{float:left;}*/
+.div19{border:1px darkmagenta solid; padding:5px;margin: 5px;}
